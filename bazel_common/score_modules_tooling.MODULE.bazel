@@ -11,7 +11,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-# Generated from known_good.json at 2026-08-28T09:19:12Z
+# Generated from known_good.json at 2026-09-28T05:42:04Z
 # Do not edit manually - use scripts/known_good/update_module_from_known_good.py --known known_good.json --output-dir-modules bazel_common
 
 bazel_dep(name = "score_crates")
@@ -24,25 +24,21 @@ git_override(
 bazel_dep(name = "score_itf")
 git_override(
     module_name = "score_itf",
-    commit = "802e0186d373e0d9d67c1c9ccb1ea08952c7ad06",
+    commit = "38ae9a3dd98ccc7434e1f8b57ca4a3d2bac82e2f",
     remote = "https://github.com/eclipse-score/itf.git",
 )
 
 bazel_dep(name = "score_tooling")
 git_override(
     module_name = "score_tooling",
-    commit = "4736b5655f3a73dd353da1bdbeced5febd669664",
-    patch_strip = 1,
-    patches = [
-        "//patches/tooling:001-expose-aspect-rules-lint-non-dev.patch",
-    ],
+    commit = "e11247276fd0693161257962435565ab6945e865",
     remote = "https://github.com/eclipse-score/tooling.git",
 )
 
 bazel_dep(name = "score_platform")
 git_override(
     module_name = "score_platform",
-    commit = "6d65a262c2329328cb9cbdd276bb143b417c54a4",
+    commit = "e2373d822fc2f6e9a3f8a0538904f3faa39309ea",
     patch_strip = 1,
     patches = [
         "//patches/platform:001-remove-duplicate-lifecycle-glossary.patch",
@@ -53,28 +49,32 @@ git_override(
 bazel_dep(name = "score_bazel_platforms")
 git_override(
     module_name = "score_bazel_platforms",
-    commit = "607672cdf2f05f21af7113dab0849726dd59bf86",
+    commit = "31a75c78f3a812ee277fe00a0e2e4db28915a8e7",
     remote = "https://github.com/eclipse-score/bazel_platforms.git",
 )
 
 bazel_dep(name = "score_test_scenarios")
 git_override(
     module_name = "score_test_scenarios",
-    commit = "fec712d490ff5d46fae91332bafac4777b300026",
+    commit = "feb5c333ca46f1a33f91ba99d3efacf303b358f9",
+    patch_strip = 1,
+    patches = [
+        "//patches/test_scenarios:001-drop-dev-only-clang-tidy-target.patch",
+    ],
     remote = "https://github.com/eclipse-score/testing_tools.git",
 )
 
 bazel_dep(name = "score_docs_as_code")
 git_override(
     module_name = "score_docs_as_code",
-    commit = "e3bfb097db77954c6725a140ebc71a018aa97b70",
+    commit = "1f8f23cb7a0c137d158244db6947e215544c3f3f",
     remote = "https://github.com/eclipse-score/docs-as-code.git",
 )
 
 bazel_dep(name = "score_process_description")
 git_override(
     module_name = "score_process_description",
-    commit = "98d1d5f42dad412a09a888ea25e59c62fa6371ce",
+    commit = "66321fe6bd131eae58fbd6395b0f0b92d63e00f5",
     remote = "https://github.com/eclipse-score/process_description.git",
 )
 

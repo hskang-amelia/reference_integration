@@ -19,17 +19,10 @@ This page lists the per-module verification reports, each generated from the
 respective module's own needs data using the module verification report
 template introduced by docs-as-code.
 
-* :doc:`Baselibs <baselibs/baselibs_verification_report>`
-* :doc:`Persistency <persistency/persistency_verification_report>`
+* :doc:`Baselibs </modules/score_baselibs/verification_report/module_verification_report>`
+* :doc:`Persistency </modules/score_persistency/verification_report/module_verification_report>`
 * :doc:`Logging </modules/score_logging/verification_report/module_verification_report>`
 
-Logging maintains its templated report in its own repository, so it is linked
-here directly from the mounted module documentation instead of being redefined
-in this repository.
-
-.. toctree::
-   :titlesonly:
-   :hidden:
-
-   Baselibs <baselibs/baselibs_verification_report>
-   Persistency <persistency/persistency_verification_report>
+Each of these modules maintains its templated report in its own repository, so
+it is linked here directly from the mounted module documentation instead of
+being redefined in this repository.
